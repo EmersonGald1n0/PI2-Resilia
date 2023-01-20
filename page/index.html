@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Codificando & Descodificando</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="titulo">
+                <h1>Codificando & Decodificando</h1>
+            </div>
+            <div class="inserirTexto">
+                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
+            </div>
+            <div class="opcao">
+                <select name="option" id="escolheCifra">
+                    <option value="default" selected disabled>Escolha uma opção</option>
+                    <option value="base64">Base64</option>
+                    <option value="cifraDeCesar">Cifra de César</option>
+                </select>
+                
+                <input type="radio" id="encode">
+                <label for="encode">Encode</label>
+                <input type="radio" id="decode">
+                <label for="decode">Decode</label>
+            </div>
+            <div class="saidaTexto">
+                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Resultado"></textarea>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
