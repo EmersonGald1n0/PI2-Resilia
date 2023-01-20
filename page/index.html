@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script defer src="../assets/js/base64.js"></script>
-    <script defer src="../assets/js/cifra.js"></script>
+    <script defer src="../assets/js/criptografia.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <title>Codificando & Decodificando</title>
 </head>
 <body>
@@ -14,24 +14,35 @@
         <div class="card">
             <div class="titulo">
                 <h1>Codificando & Decodificando</h1>
+                <h3>Cifra de César e Base64</h3>
             </div>
             <div class="inserirTexto">
-                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
+                <textarea name="texto" id="texto1" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
             </div>
             <div class="opcao">
-                <select name="option" id="escolheCifra">
+                <select name="option" class="optionCripto">
                     <option value="default" selected disabled>Escolha uma opção</option>
                     <option value="base64">Base64</option>
                     <option value="cifraDeCesar">Cifra de César</option>
                 </select>
-                
-                <input type="radio" id="encode">
-                <label for="encode">Encode</label>
-                <input type="radio" id="decode">
-                <label for="decode">Decode</label>
+                <div class="incremento">
+                    <label for="incremento">Escolha o Incremento</label>
+                    <input type="number" id="incremento" min="1" max="" value="1">
+                </div>
+                <div class="radioButton">
+                    <input type="radio" id="encode">
+                    <label for="encode">Encode</label>
+                    <input type="radio" id="decode">
+                    <label for="decode">Decode</label>
+                </div>
             </div>
+            
             <div class="saidaTexto">
-                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Resultado"></textarea>
+                <label for="texto2">Resultado</label>
+                <textarea id="texto2" cols="30" rows="10" placeholder="Visualisar Resultado" readonly></textarea>
+            </div>
+            <div class="botao">
+                <button id="botao">Enviar</button>
             </div>
         </div> 
     </div>
