@@ -2,15 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
 }
 
 body, html {
     width: 100%;
     height: 100%;
     background: #100f0f;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif, sans-serif;
 }
 
 .container {
@@ -23,8 +21,8 @@ body, html {
 
 .card {
     width: 700px;
-    height: 600px;
-    background: #fff;
+    height: 800px;
+    background: #353046;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(98, 112, 132);
     display: flex;
@@ -33,7 +31,137 @@ body, html {
     flex-direction: column;
 }
 
-.titulo > h1 {
-    display: flex;
-    
+.titulo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #2288bf;
 }
+
+.titulo h3 {
+    text-align: center;
+    color: #2288bf;
+}
+
+.inserirTexto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.inserirTexto textarea::placeholder, .saidaTexto textarea::placeholder {
+    color: #6a6a6a;
+}
+
+
+
+.optionCripto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 25px;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    box-shadow: 0px 10px 25px #0000007a;
+}
+
+/* removendo borda do input quando ativado */
+
+.optionCripto:focus {
+    outline: none;
+}
+
+.incremento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.incremento input {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 10px 25px #0000007a;
+}
+
+.incremento label {
+    color: #2288bf;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* removendo borda do input quando ativado */
+
+.incremento input:focus {
+    outline: none;
+}
+
+.radioButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.opcao label, input {
+    color: #2288bf;
+}
+
+.saidaTexto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+}
+  
+.saidaTexto label {
+    margin-bottom: 10px;
+    color: #2288bf;
+    font-weight: bold;
+}
+  
+.saidaTexto input, textarea {
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: #100f0f;
+    box-shadow: 0px 10px 25px #0000007a;
+    outline: none;
+    resize: none;
+}
+
+#botao {
+    width: 200px;
+    padding: 10px 0px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #eb1958;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0px 10px 25px #0000007a;
+    background: linear-gradient(90deg, #2288bf, #353046);
+    background-clip: text; 
+}
+
+#botao:hover {
+    background: linear-gradient(90deg, #353046, #2288bf);
+    background-clip: text; 
+}
+
+
+  
