@@ -7,5 +7,6 @@
 
 <div align="center">
 ![image](https://user-images.githubusercontent.com/101108016/214023443-867205c3-f922-491f-b44b-a61a9611ac72.png)
-![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 </div>
+![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
+
