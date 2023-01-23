@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script defer src="../assets/js/criptografia.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <title>Codificando & Decodificando</title>
+    <title>Cifra de Cesar & Base64</title>
 </head>
 <body>
     <div class="container">
@@ -16,35 +16,36 @@
                 <h1>Codificando & Decodificando</h1>
                 <h3>Cifra de César e Base64</h3>
             </div>
-            <div class="inserirTexto">
-                <textarea name="texto" id="texto1" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
-            </div>
-            <div class="opcao">
-                <select name="option" class="optionCripto">
-                    <option value="default" selected disabled>Escolha uma opção</option>
-                    <option value="base64">Base64</option>
-                    <option value="cifraDeCesar">Cifra de César</option>
-                </select>
-                <div class="incremento">
-                    <label for="incremento">Escolha o Incremento</label>
-                    <input type="number" id="incremento" min="1" max="" value="1">
+            <form class="forms" name="formulario">
+                <div class="inserirTexto">
+                    <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Insira o texto aqui"></textarea>
                 </div>
-                <div class="radioButton">
-                    <input type="radio" id="encode">
-                    <label for="encode">Encode</label>
-                    <input type="radio" id="decode">
-                    <label for="decode">Decode</label>
+                <div class="opcao">
+                    <select class="optionCripto" id="chooseCode" required>
+                        <option value="default" selected disabled>Escolha uma opção</option>
+                        <option value="base64" id="base64">Base64</option>
+                        <option value="cifraDeCesar" id="cifraDeCesar">Cifra de César</option>
+                    </select>
+                    <div class="incremento">
+                        <label for="incremento">Escolha o Incremento</label>
+                        <input type="number" id="incremento" min="1" value="1">
+                    </div>
+                    <div class="radioButton">
+                        <input type="radio" id="encode" class="radioBtn" name="criptografar" value="encode" checked><label for="encode">Encode</label>
+                        <input type="radio" id="decode" class="radioBtn" name="criptografar" value="decode"><label for="decode">Decode</label>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="saidaTexto">
-                <label for="texto2">Resultado</label>
-                <textarea id="texto2" cols="30" rows="10" placeholder="Visualisar Resultado" readonly></textarea>
-            </div>
-            <div class="botao">
-                <button id="botao">Enviar</button>
-            </div>
+                <div class="saidaTexto">
+                    <label for="texto2">Resultado</label>
+                    <textarea class="saidaTexto" id="resultado" cols="30" rows="10" placeholder="Visualisar Resultado" readonly></textarea>
+                </div>
+                <div class="btn">
+                    <button id="btn" type="submit">Encode</button>
+                </div>
+            </form>
         </div> 
     </div>
+
+    <script src="../assets/js/decifra.js"></script>
 </body>
 </html>
