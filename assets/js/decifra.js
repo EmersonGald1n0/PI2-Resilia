@@ -28,16 +28,25 @@ let formulario = document.forms.formulario;
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
 
+
+  let selecaoOperacao = $('input[name="criptografar"]:checked').val();
   let texto = formulario.texto.value;
   let escolha = formulario.chooseCode.value;
-  let botoes = formulario.criptografar.value;
   let numeroIncremento = formulario.incremento.value;
   let msgFinal = "";
 
-  if (escolha == "Base64") {
-    msgFinal = base64(botoes, texto);
+  if (selecaoOperacao == "encode") {
+    if (escolha == "base64") {
+      msgFinal = codificaBase64(texto);
+    } else {
+      msgFinal = cifraCesar(texto, numeroIncremento);
+    }
   } else {
-    msgFinal = cifraDeCesar(botoes, texto, numeroIncremento);
+    if (escolha == "base64") {
+      msgFinal = decodificaBase64(texto);
+    } else {
+      msgFinal = decifraCesar(texto, numeroIncremento);
+    }
   }
 
   let resultadoTexto = document.getElementById("resultado");
@@ -54,23 +63,33 @@ function base64(codifica, texto) {
     }
   }
 
+const codificaBase64 = (texto) => btoa(texto);
+const decodificaBase64 = (texto) => atob(texto);
+
 /* Função Cifra de César */
 
-function cifraDeCesar(codifica, texto, numeroIncremento) {
+function cifraCesar(texto, numeroIncremento) {
   numeroIncremento = Number(numeroIncremento);
   let msgFinal = "";
 
   for (let i = 0; i < texto.length; i++) {
     let letra = texto[i];
     let code = letra.charCodeAt();
-
-    if (codifica == "codificar") {
-      code += numeroIncremento;
-    } else {
-      code -= numeroIncremento;
-    }
+    code += numeroIncremento;
     msgFinal += String.fromCharCode(code);
   }
   return msgFinal;
 }
 
+function decifraCesar(texto, numeroIncremento) {
+  numeroIncremento = Number(numeroIncremento);
+  let msgFinal = "";
+
+  for (let i = 0; i < texto.length; i++) {
+    let letra = texto[i];
+    let code = letra.charCodeAt();
+    code -= numeroIncremento;
+    msgFinal += String.fromCharCode(code);
+  }
+  return msgFinal;
+}
