@@ -20,8 +20,8 @@ body, html {
 }
 
 .card {
-    width: 700px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     background: #353046;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(98, 112, 132);
@@ -31,37 +31,41 @@ body, html {
     flex-direction: column;
 }
 
-.titulo h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-    color: #2288bf;
-}
-
-.titulo h3 {
-    text-align: center;
-    color: #2288bf;
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ff7700;
 }
 
 .inserirTexto {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 20px 0;
+    height: 100px;
 }
 
 .inserirTexto textarea::placeholder, .saidaTexto textarea::placeholder {
     color: #6a6a6a;
 }
 
-
+#texto {
+    border: none;
+    border-radius: 10px;
+    color: #100f0f;
+    box-shadow: 0px 10px 25px #0000007a;
+    outline: none;
+    resize: none;
+}
 
 .optionCripto {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px 25px;
+    margin: 5px 0px 5px;
     border-radius: 5px;
     width: 200px;
     height: 25px;
@@ -94,7 +98,6 @@ body, html {
 }
 
 .incremento label {
-    color: #2288bf;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -112,27 +115,38 @@ body, html {
     justify-content: space-around;
 }
 
+.opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+#encode, #decode {
+    margin: 5px;
+}
+
 .opcao label, input {
-    color: #2288bf;
+    color: #ff7700;
 }
 
 .saidaTexto {
-    width: 100%;
+    width: 280px;
+    height: 125px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 15px 0px;
 }
-  
+
 .saidaTexto label {
     margin-bottom: 10px;
-    color: #2288bf;
+    color: #ff4400;
     font-weight: bold;
 }
   
 .saidaTexto input, textarea {
-    width: 90%;
     border: none;
     border-radius: 10px;
     padding: 20px;
@@ -142,8 +156,13 @@ body, html {
     resize: none;
 }
 
-#botao {
-    width: 200px;
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+#btn {
+    width: 150px;
     padding: 10px 0px;
     margin-top: 15px;
     border: none;
@@ -154,14 +173,10 @@ body, html {
     cursor: pointer;
     color: #fff;
     box-shadow: 0px 10px 25px #0000007a;
-    background: linear-gradient(90deg, #2288bf, #353046);
+    background: linear-gradient(90deg, #ff4400, #dada04);
     background-clip: text; 
 }
 
-#botao:hover {
-    background: linear-gradient(90deg, #353046, #2288bf);
-    background-clip: text; 
+#btn:hover {
+   box-shadow: 0px 0px 5px #ff4400;
 }
-
-
-  
