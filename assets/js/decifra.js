@@ -34,7 +34,7 @@ formulario.addEventListener("submit", function (event) {
   let numeroIncremento = formulario.incremento.value;
   let msgFinal = "";
 
-  if (escolha == "base64") {
+  if (escolha == "Base64") {
     msgFinal = base64(botoes, texto);
   } else {
     msgFinal = cifraDeCesar(botoes, texto, numeroIncremento);
@@ -60,7 +60,7 @@ function cifraDeCesar(codifica, texto, numeroIncremento) {
   numeroIncremento = Number(numeroIncremento);
   let msgFinal = "";
 
-  for (var i = 0; i < texto.length; i++) {
+  for (let i = 0; i < texto.length; i++) {
     let letra = texto[i];
     let code = letra.charCodeAt();
 
