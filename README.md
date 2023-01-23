@@ -1,5 +1,5 @@
 <div>
-    <h1>Projeto Mensagem Oculta</h1>
+    <h1>Projeto Mensagem Oculta <img src="./assets/img/cadeado.png" alt="icon cadeado"></h1>
     <h3>O que é para fazer?</h3>
     <p>Criar uma mensagem codificada e escolher o algoritmo a ser utilizado.</p>
     <p>Criar uma codificação de mensagens onde a pessoa usuária deverá ser capaz de inserir uma mensagem a ser codificada ou decodificada, escolher o algoritmo a ser utilizado e receber o retorno da mensagem.</p>
