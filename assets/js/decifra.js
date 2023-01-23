@@ -14,11 +14,11 @@ $(".optionCripto").on("change", function (e) {
 /* Função que altera o nome do botão dependendo de qual opção esteja selecionada */
 
 $('#encode').on('click', () => {
-    $('#btn').text('Encode')
+    $('#btn').text('Codificar Mensagem!')
 });
 
 $('#decode').on('click', () => {
-    $('#btn').text('Decode')
+    $('#btn').text('Decodificar Mensagem!')
 });
 
 let formulario = document.forms.formulario;
@@ -71,5 +71,4 @@ function cifraDeCesar(codifica, texto, numeroIncremento) {
   }
   return msgFinal;
 }
-
 
