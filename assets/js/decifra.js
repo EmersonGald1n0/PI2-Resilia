@@ -21,6 +21,8 @@ $('#decode').on('click', () => {
     $('#btn').text('Decodificar Mensagem!')
 });
 
+/* Criptografias */
+
 let formulario = document.forms.formulario;
 
 formulario.addEventListener("submit", function (event) {
@@ -38,7 +40,7 @@ formulario.addEventListener("submit", function (event) {
     msgFinal = cifraDeCesar(botoes, texto, numeroIncremento);
   }
 
-  var resultadoTexto = document.getElementById("resultado");
+  let resultadoTexto = document.getElementById("resultado");
   resultadoTexto.innerHTML = `${msgFinal}`;
 });
 
@@ -56,11 +58,11 @@ function base64(codifica, texto) {
 
 function cifraDeCesar(codifica, texto, numeroIncremento) {
   numeroIncremento = Number(numeroIncremento);
-  var msgFinal = "";
+  let msgFinal = "";
 
   for (var i = 0; i < texto.length; i++) {
-    var letra = texto[i];
-    var code = letra.charCodeAt();
+    let letra = texto[i];
+    let code = letra.charCodeAt();
 
     if (codifica == "codificar") {
       code += numeroIncremento;
