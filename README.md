@@ -1,4 +1,4 @@
-<div align="center">
+<div>
     <h1>Projeto Mensagem Oculta</h1>
     <h3>O que é para fazer?</h3>
     <p>Criar uma mensagem codificada e escolher o algoritmo a ser utilizado.</p>
